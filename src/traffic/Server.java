@@ -13,16 +13,16 @@ public class Server {
     public void setLimitVehicle(int limitVehicle) {
         this.limitVehicle = limitVehicle;
     }
-    public Server(int size){// конструктор класу, параметр size – кількість видів ТЗ
+    public Server(int size){ // конструктор класу, параметр size – кількість видів ТЗ
         countVehicles = new int[size];
     }
-    public int getLimitVehicle(){// повертає обмеження на кількість ТЗ, що одночасно виїхали в місто
+    public int getLimitVehicle(){ // повертає обмеження на кількість ТЗ, що одночасно виїхали в місто
         return limitVehicle;
     }
-    public int getCurrentCountVehicle(){// повертає загальну кількість ТЗ, що виїхали в місто
+    public int getCurrentCountVehicle(){ // повертає загальну кількість ТЗ, що виїхали в місто
         return commonCountVehicles;
     }
-    public void addTransport(int numberVehicles, Vehicle vehicle){// додає ТЗ до віртуальної бази
+    public void addTransport(int numberVehicles, Vehicle vehicle){ // додає ТЗ до віртуальної бази
         countVehicles[numberVehicles]++;
         commonCountVehicles++;
         vehicles[commonCountVehicles] = vehicle;
