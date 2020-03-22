@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int SIZE = 4;// кількість видів ТЗ
+        int SIZE = 7;
         Server server = new Server(SIZE);
-        int limit = 10;
+        int limit = 15;
         server.setLimitVehicle(limit);
 
         while (server.getCurrentCountVehicle() < server.getLimitVehicle()){
@@ -27,6 +27,18 @@ public class Test {
                 case 3:
                     Jumpers jumpers = new Jumpers();
                     server.addTransport(amount, jumpers);
+                    break;
+                case 4:
+                    TractorCrawler tractorCrawler = new TractorCrawler("TractorCrawler",300,120, "Crawler");
+                    server.addTransport(amount, tractorCrawler);
+                    break;
+                case 5:
+                    TractorWheeled tractorWheeled = new TractorWheeled("TractorWheeled", 250, 140, "Wheeled");
+                    server.addTransport(amount, tractorWheeled);
+                    break;
+                case 6:
+                    Bus bus = new Bus("Bus", 170, 135, 25);
+                    server.addTransport(amount, bus);
                     break;
             }
         }
